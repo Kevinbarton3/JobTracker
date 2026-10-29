@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "JobTracker Capture",
+  "version": "1.0.4",
+  "description": "Save the job posting you are viewing to your local JobTracker.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAruCWvj7wR3JTRddBmLgQJmyG86M3d7PLkgOxJRgXNVkF91aZZX8MSHVZFJ2/sZ/7Ze5hV4SRKvc1JymZTrfwJ141as8LI6IZc0fGh+M5R6lijWMwH8cNYJY/18ulOQscNGRCosqn68xBes+RFRNcyej/ZATqngAGAuaFf5foCCbnoE80bR6+CBZ9YR2hzb0kk+TTZHPIu+0NNwpEnMj7wEDmORXxymfX7Xzka9uzrpGMwGcq0U97kXmSeA+Xi1xM5buddd7r1V7r62i2bijulurhw84hZipdJzyVfKBHM+lXCgpvkcHa0c1/uMLPkQ2x6beswOi3nE5L3CfEfiI4EQIDAQAB",
+  "permissions": ["activeTab", "scripting", "storage", "nativeMessaging"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Add to JobTracker"
+  }
+}

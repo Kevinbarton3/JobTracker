@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JobTracker capture</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="eyebrow">JOBTRACKER CAPTURE · 1.0.4</p>
+        <h1>Review this job</h1>
+      </div>
+      <button id="refresh" class="secondary" type="button">Capture current page again</button>
+    </header>
+    <p id="message" role="status" aria-live="polite">Reading this posting…</p>
+    <main>
+      <section id="embeddedNotice" class="card" hidden>
+        <h2>Open the actual job posting</h2>
+        <p>
+          This page embeds its job details on a separate careers site. Open that posting, then use
+          the JobTracker extension there to capture it.
+        </p>
+        <button id="embeddedOpen" class="secondary" type="button">Open job posting</button>
+      </section>
+      <label id="choicesLabel" hidden>Choose posting<select id="choices"></select></label>
+      <form id="capture">
+        <section class="card">
+          <h2>Job details</h2>
+          <p class="hint">Review the captured information. Company and position are required.</p>
+          <div class="fields">
+            <label class="wide"
+              >Position <span aria-hidden="true">*</span
+              ><input id="position" required maxlength="300" placeholder="Job title"
+            /></label>
+            <label
+              >Company <span aria-hidden="true">*</span
+              ><input id="company" required maxlength="300" placeholder="Company name"
+            /></label>
+            <label
+              >Location<input id="location" maxlength="500" placeholder="City, state or country"
+            /></label>
+            <label
+              >Work arrangement<select id="workArrangement">
+                <option value="">Not specified</option>
+                <option>On-site</option>
+                <option>Hybrid</option>
+                <option>Remote</option>
+              </select></label
+            >
+            <label
+              >Employment type<select id="employmentType">
+                <option value="">Not specified</option>
+                <option>Full-time</option>
+                <option>Part-time</option>
+                <option>Internship</option>
+                <option>Contract</option>
+                <option>Temporary</option>
+              </select></label
+            >
+            <label>Salary<input id="salaryRange" maxlength="300" placeholder="Not listed" /></label>
+            <label
+              >Source<select id="source">
+                <option>LinkedIn</option>
+                <option>Indeed</option>
+                <option>Company Website</option>
+                <option>Other</option>
+              </select></label
+            >
+            <label class="wide"
+              >Posting URL<input
+                id="jobUrl"
+                required
+                type="url"
+                maxlength="4000"
+                placeholder="https://…"
+            /></label>
+          </div>
+        </section>
+        <section class="card">
+          <h2>Description &amp; resume</h2>
+          <label
+            >Job description<textarea
+              id="description"
+              rows="5"
+              maxlength="40000"
+              placeholder="Captured description will appear here"
+            ></textarea>
+          </label>
+          <label
+            >Resume used <span class="optional">— optional</span
+            ><select id="resumeId">
+              <option value="">Not specified</option>
+            </select></label
+          >
+          <p class="hint">Select a resume only if you know which one you submitted.</p>
+        </section>
+      </form>
+      <section id="duplicates" class="card" hidden>
+        <h2>Already in JobTracker?</h2>
+        <div id="matches"></div>
+        <button id="anyway" class="secondary" hidden>Save as a separate job</button>
+      </section>
+    </main>
+    <footer>
+      <button id="open" class="secondary" hidden>Open application</button>
+      <div class="actions">
+        <button id="save" class="secondary" type="submit" form="capture" value="save">
+          Save job <span>Interested · no application date</span></button
+        ><button id="applied" class="primary" type="submit" form="capture" value="applied">
+          I applied <span>Applied · today's date</span>
+        </button>
+      </div>
+    </footer>
+    <script src="extract.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

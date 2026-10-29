@@ -1,0 +1,36 @@
+{
+  "name": "job-application-tracker",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b --pretty false",
+    "test": "vitest run",
+    "tauri": "tauri",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" \"chrome-extension/*.{js,ts,css,html,json}\" *.json vite.config.ts",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css}\" \"chrome-extension/*.{js,ts,css,html,json}\" *.json vite.config.ts"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.8.0",
+    "@tauri-apps/plugin-notification": "^2.3.3",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.8.0",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^29.1.1",
+    "prettier": "3.6.2",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.5",
+    "vitest": "^4.1.10"
+  }
+}

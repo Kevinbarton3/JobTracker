@@ -1,0 +1,42 @@
+node_modules/
+dist/
+src-tauri/target/
+*.db
+*.db-shm
+*.db-wal
+.DS_Store
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+client_secret*.json
+credentials*.json
+token.json
+tokens.json
+
+# Personal records and exports
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.jobtrack
+/backups/
+/exports/
+/resumes/
+/personal-data/
+
+# Local tooling and generated output
+.vs/
+.vscode/
+*.tsbuildinfo
+*.log
+coverage/
+
+/src-tauri/gen/
+/vite.config.js
+/vite.config.d.ts
